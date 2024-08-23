@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Rinterio</title>
 
     <!-- Rimix Icon CND  -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
@@ -20,44 +19,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
 
-
-
-    <!-- style  -->
-
-    <style>
-        .manrope {
-            font-family: "Manrope", sans-serif;
-
-        }
-
-        .bg-img {
-            background-image: url(./assets/bg.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
-
     <!-- scripts -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    backgroundImage: {
+                        'bgImg': "url('./assets/bg.jpg')",
+                    },
                     colors: {
                         prime: '#ABEF5F',
+                    },
+                    fontFamily: {
+                        manrope: "Manrope",
+
                     }
                 }
             }
         }
     </script>
 
-
-
-
-
-
 </head>
 
-<body class="manrope h-[200rem]">
+<body class="font-manrope h-[200rem]">
 
     <!-- header  -->
     <header class="w-11/12 mx-auto ">
@@ -510,7 +494,7 @@
 
         <!-- Let’s Discuss Next Project seciton -->
 
-        <section class="bg-img">
+        <section class="bg-bgImg bg-no-repeat bg-cover">
             <div class="w-11/12 mx-auto pb-10">
 
                 <!-- titel div  -->
@@ -597,9 +581,7 @@
     </main>
 
     <!-- footer  -->
-
-
-    <footer class="text-center py-16 bg-black space-y-6">
+    <footer class="text-center px-5 py-16 bg-black space-y-6">
 
         <div class="flex gap-1 justify-center items-center">
 
@@ -635,7 +617,7 @@
         </div>
 
         <div>
-            <button class="btn btn-active rounded-3xl bg-prime text-xl font-extrabold">Book Consult
+            <button class="btn btn-active rounded-3xl bg-prime w-full sm:w-auto text-xl font-extrabold">Book Consult
 
                 <div>
                     <i class="ri-arrow-right-up-line bg-black text-white rounded-full p-2 text-xl"></i>
